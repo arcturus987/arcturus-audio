@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./assets/arcturus-audio-favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Services</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Universal+Sans+%3A700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Product+Sans+%3A700"/>
+  <link rel="stylesheet" href="./styles/services.css"/>
+  <style>
+  </style>
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="home-background"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navigation-bar">
+
+    <div class="logo-and-text">
+        <img class="nav-logo" src="./assets/arcturus-audio-medium.png"/>
+
+        <navnorm class="nav">
+            <ul class="nav-list-group">
+                <li class="nav-list-item"><a href="home.html">Home</a></li>
+                <li class="nav-list-item"><a href="services.html">Services</a></li>
+                <li class="nav-list-item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </navnorm>
+    </div>
+
+    <icon class="nav-icon-group">
+      <a href="#" class="shopping-logo-link">
+        <img class="shopping-logo" id="shopping-logo" src="./assets/shopping-logo.png" alt="Shopping Logo"/>
+      </a>
+    
+      <a href="#" class="user-logo-link">
+        <img class="user-logo" id="user-logo" src="./assets/user-logo.png" alt="User Logo"/>
+      </a>
+    </icon>
+
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <svg viewBox="0 0 32 32">
+          <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          <path class="line" d="M7 16 27 16"></path>
+        </svg>
+          <div class="menu-list" id="menu">
+            <img class="nav-logo-black" src="./assets/arcturus-audio-medium-black.png"/>
+            <div class="menu-item"><a class="link" href="home.html">Home</a></div>
+            <div class="menu-item"><a class="link" href="services.html">Services</a></div>
+            <div class="menu-item"><a class="link" href="contact.html">Contact</a></div>
+            <div class="menu-item" id="shopping-logo"><a class="link" href="#">Cart</a></div>
+            <div class="menu-item" id="user-logo"><a class="link" href="#">My Account</a></div>
+          </div>
+      </div>
+    </nav>
+      
+  </header>
+
+  <!-- Error Box -->
+  <main class="error-container">
+    <div class="text-paragraph">
+      <h2 class="error-title">Under Maintenance</h2>
+      <p class="error-text">We are still under maintenance. Please contact us for further inquiries.</p>
+
+      <a href="contact.html" class="button contact-button">Contact</a>
+      <button class="button close-button" id="error-close">Close</button>
+    </div>
+  </main>
+
+
+  <!-- Main Container -->
+  <div class="content-container">
+
+    <!-- Background Change Switch -->
+    <div class="fixed-switch-container">
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    
+    <!-- Text Animation Container -->
+    <div class="text-animation-container">
+      <section class="animation">
+        <div class="first"><div>Want your track to sound like your favorite one?</div></div>
+        <div class="second"><div>Let us take your track to reach to it’s utmost potential!</div></div>
+      </section>
+    </div>
+
+    <div class="cards">
+      <!-- Mixing Card -->
+      <div class="mixing-card">
+        <div class="mixing-card-img"></div>
+        <div class="mixing-card-info">
+          <p class="mixing-text-title">Mixing </p>
+          <p class="mixing-text-body">Mixing your raw tracks to sound like your favorite record! No gimmicks, just your music at its best.</p>
+        </div>
+        <div class="mixing-card-footer">
+          <span class="mixing-text-title">$29.49</span>
+          <div class="mixing-card-button">
+            <img class="button-logo" src="./assets/shopping-logo-black.png" alt="Shopping Logo"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mastering Card -->
+      <div class="mastering-card">
+        <div class="mastering-card-img"></div>
+        <div class="mastering-card-info">
+          <p class="mastering-text-title">Mastering </p>
+          <p class="mastering-text-body">Master your audio with styles like loud, punchy, open, or wide—pure sonic excellence with no gimmicks.</p>
+        </div>
+        <div class="mastering-card-footer">
+          <span class="mastering-text-title">$29.49</span>
+          <div class="mastering-card-button">
+            <img class="button-logo" src="./assets/shopping-logo-black.png" alt="Shopping Logo"/>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+  </div>
+
+
+  <!-- Background switcher -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var checkbox = document.querySelector('.fixed-switch-container input[type="checkbox"]');
+      var homeBackground = document.querySelector('.home-background');
+
+      checkbox.checked = false;
+  
+      checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+          homeBackground.classList.add('dark-background');
+        } else {
+          homeBackground.classList.remove('dark-background');
+        }
+      });
+    });
+  </script>
+
+  <script>document.addEventListener('scroll', function() {
+    var scrollPosition = window.pageYOffset;
+  
+    var elements = document.querySelectorAll('.text-animation-container');
+  
+    elements.forEach(function(el) {
+      var opacity = 1 - (scrollPosition / 100);
+      el.style.opacity = opacity;
+    });
+  });
+  </script>
+
+<script>
+  // Get elements by their ID
+  const shoppingLogo = document.getElementById('shopping-logo');
+  const userLogo = document.getElementById('user-logo');
+  const errorContainer = document.querySelector('.error-container');
+  const closeButton = document.getElementById('error-close');
+
+  // Function to show error container
+  function showError() {
+    errorContainer.style.display = 'block'; // Change display style to block to show it
+  }
+
+  // Function to hide error container
+  function closeError() {
+    errorContainer.style.display = 'none'; // Change display style to none to hide it
+  }
+
+  // Event listeners
+  shoppingLogo.addEventListener('click', showError);
+  userLogo.addEventListener('click', showError);
+  closeButton.addEventListener('click', closeError);
+</script>
+
+
+</body>
+</html>
