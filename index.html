@@ -108,8 +108,7 @@
       var bottomElement = document.getElementById('bottom');
 
       arrow.addEventListener('click', function () {
-        bottomElement.scrollIntoView({ behavior: 'smooth' });
-      });
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });      });
     });
   </script>
 
