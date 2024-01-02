@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home</title>
   <link href="https://fonts.cdnfonts.com/css/google-sans" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Universal+Sans+%3A700"/>
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
   <link rel="stylesheet" href="./styles/home.css"/>
   <style>
   </style>
@@ -20,7 +20,7 @@
       <img class="home-logo-big" src="./assets/arcturus-audio-medium.png"/>
 
       <div class="motto-and-vector">
-        <p class="motto-text">Elevating Silence to Serenades, Unleashing Sonic Aesthetics!</p>
+        <p class="motto-text">Elevating Silence to Serenades,&nbsp;<span class="break">Unleashing Sonic Aesthetics!</span></p>
         <img class="waves-vector" src="./assets/waves-vector.png"/>
       </div>
 
@@ -75,6 +75,10 @@
             <div class="menu-item"><a class="link" href="contact.html">Contact</a></div>
             <div class="menu-item"><a class="link" href="#">Cart</a></div>
             <div class="menu-item"><a class="link" href="#">My Account</a></div>
+            <div class="menu-footer" id="menu-footer"></div>
+            <div class="menu-text" id="menu-text">
+              <p>We are here for you<br><a href="mailto:arcturus.audio@protonmail.com" style="color: #1e1e1e; text-decoration: underline;">arcturus.audio@protonmail.com</a></p>
+            </div>
           </div>
       </div>
     </nav>
@@ -105,12 +109,16 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var arrow = document.querySelector('.arrow');
-      var bottomElement = document.getElementById('bottom');
 
       arrow.addEventListener('click', function () {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });      });
+        window.scrollTo({
+          top: document.documentElement.scrollHeight || document.body.scrollHeight,
+          behavior: 'smooth' 
+        });
+      });
     });
   </script>
+
 
   <!-- Background switcher -->
   <script>

@@ -86,7 +86,7 @@ ul {
 .nav-list-item {
   font-size: 25px;
   font-weight: 600;
-  font-family: Universal Sans;
+  font-family: 'SF Pro Display', sans-serif;
 }
 
 a {
@@ -135,14 +135,14 @@ a {
 }
 
 
+/* Mobile Nav Bar */
 .link {
   text-decoration: none;
   color: #1E1E23;
   opacity:1;
   font-family: Universal Sans;
-  font-weight: 700;
-  font-size: 30px;
   font-weight: 600;
+  font-size: 20px;
   transition: 200ms;
 }
 
@@ -150,7 +150,7 @@ a {
   content: '';
   position: absolute;
   width: 100%;
-  height: 3px;
+  height: 2px;
   border-radius: 5px;
   background-color: #000;
   bottom: -2px;
@@ -186,12 +186,29 @@ nav {
 
 .nav-logo-black {
   padding-top: 60px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   width: 150px;
   height: auto;
   display: block;
 }
 
+.menu-text {
+  color: #1E1E23;
+  font-family: 'SF Pro Display', sans-serif;  
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.menu-footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 2px solid #1e1e1e50;
+ }
 
 #menuToggle {
   display: flex;
@@ -199,7 +216,6 @@ nav {
   justify-content: center;
   align-items: flex-end;
   position: relative;
-  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -256,11 +272,10 @@ nav {
   position: absolute;
   width: 100vw;
   height: fit-content;
-  margin: 100px -30px 0 100px;
-  padding: 30px;
-  padding-top: 200px;
+  margin: 300px -20px 0 100px;
+  padding: 20px;
   border-radius: 30px;
-  background-color: #F5F6FA;
+  background-color: #ffffff;
   transform-origin: 0% 0%;
   transform: translateY(-100%);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -381,11 +396,10 @@ input:checked + .slider:before {
   position: relative;
   text-align: left;
   margin-top: 150px;
-  margin-right: auto;
   font-size: 40px;
   font-weight: 700;
   color: #ffffff;
-  font-family: Product Sans;
+  font-family: 'Product Sans', sans-serif;
   white-space: nowrap;
 }
 
@@ -437,7 +451,7 @@ input:checked + .slider:before {
   font-size: 20px;
   font-weight: 900;
   color: #000;
-  font-family: Product Sans;
+  font-family: 'Product Sans', sans-serif;
   text-align: center;
   margin: 10px 0;
   word-wrap: break-word;
@@ -447,7 +461,7 @@ input:checked + .slider:before {
   font-size: 20px;
   font-weight: 500;
   color: #000;
-  font-family: Product Sans;
+  font-family: 'Product Sans', sans-serif;
   text-align: center;
   margin: 10px 0;
   word-wrap: break-word;
@@ -458,7 +472,7 @@ input:checked + .slider:before {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
-  font-family: Product Sans;
+  font-family: 'Product Sans', sans-serif;
   font-size: 20px;
   color: white;
   cursor: pointer;
@@ -535,13 +549,13 @@ input:checked + .slider:before {
  /*Text*/
  .mixing-text-title {
   font-weight: 900;
-  font-family: Product Sans;
+  font-family: 'Product Sans', sans-serif;
   font-size: 25px;
   line-height: 1.5;
  }
  
  .mixing-text-body {
-  font-family: Product Sans;
+  font-family: 'Product Sans', sans-serif;
   font-size: 20px;
   padding-bottom: 20px;
  }
@@ -612,13 +626,13 @@ input:checked + .slider:before {
  /*Text*/
  .mastering-text-title {
   font-weight: 900;
-  font-family: Product Sans;
+  font-family: 'Product Sans', sans-serif;
   font-size: 25px;
   line-height: 1.5;
  }
  
  .mastering-text-body {
-  font-family: Product Sans;
+  font-family: 'Product Sans', sans-serif;
   font-size: 20px;
   padding-bottom: 20px;
  }
@@ -797,14 +811,19 @@ input:checked + .slider:before {
 
 @media (max-width: 768px) {
 
+  .navigation-bar {
+    padding: 20px;
+    justify-content: space-between;
+  }
+
   .nav-list-group {
-      display: none; /* Hide the navigation links */
-      flex-direction: column; /* Stack the links vertically */
-      width: 100%; /* Full width */
+      display: none;
+      flex-direction: column;
+      width: 100%; 
       position: absolute;
-      top: 0; /* Adjust based on your nav bar's height */
+      top: 0;
       left: 0;
-      background: #000; /* Match the nav bar's color */
+      background: #000;
   }
 
   nav {
@@ -817,7 +836,7 @@ input:checked + .slider:before {
 
   .text-animation-container {
     text-align: center;
-    font-size: calc(0.5rem + 2vw);
+    font-size: 17px;
   }
 
   .cards {
