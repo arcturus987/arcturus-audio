@@ -138,7 +138,6 @@ a {
   transform: scaleX(1);
 }
 
-
 .shopping-logo-mob, .user-logo-mob {
   width: auto;
   height: 20px;
@@ -149,7 +148,6 @@ a {
   padding: 0;
   list-style-type: none;
 }
-
 
 nav {
   display: none;
@@ -166,7 +164,7 @@ nav {
 
 .menu-text {
   color: #1E1E1E;
-  font-family: Universal Sans;
+  font-family: 'SF Pro Display', sans-serif;
   font-weight: 500;
   font-size: 20px;
   padding-bottom: 20px;
@@ -210,7 +208,6 @@ nav {
 }
 
 
-
 .line, .line-top-bottom {
   fill: none;
   stroke: white; /* default color */
@@ -223,7 +220,6 @@ nav {
 .line-top-bottom {
   stroke-dasharray: 12 63;
 }
-
 
 #menuToggle input:checked ~ svg .line,
 #menuToggle input:checked ~ svg .line-top-bottom {
@@ -238,7 +234,6 @@ nav {
   stroke-dasharray: 20 300;
   stroke-dashoffset: -32.42;
 }
-
 
 #menu
 {
